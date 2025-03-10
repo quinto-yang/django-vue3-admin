@@ -40,7 +40,7 @@
 		<el-row :gutter="15" class="home-card-three">
 			<el-col :xs="24" :sm="10" :md="10" :lg="8" :xl="8">
 				<div class="home-card-item">
-					<div class="home-card-item-title">快捷导航工具</div>
+					<div class="home-card-item-title">Quick navigation tool</div>
 					<div class="home-monitor">
 						<div class="flex-warp">
 							<div class="flex-warp-item" v-for="(v, k) in homeThree" :key="k">
@@ -94,7 +94,7 @@ export default defineComponent({
 				{
 					num1: '125,12',
 					num2: '-12.32',
-					num3: '订单统计信息',
+					num3: 'Order statistics information',
 					num4: 'fa fa-meetup',
 					color1: '#FF6462',
 					color2: '--next-color-primary-lighter',
@@ -103,7 +103,7 @@ export default defineComponent({
 				{
 					num1: '653,33',
 					num2: '+42.32',
-					num3: '月度计划信息',
+					num3: 'Monthly plan information',
 					num4: 'iconfont icon-ditu',
 					color1: '#6690F9',
 					color2: '--next-color-success-lighter',
@@ -112,7 +112,7 @@ export default defineComponent({
 				{
 					num1: '125,65',
 					num2: '+17.32',
-					num3: '年度计划信息',
+					num3: 'Annual Plan Information',
 					num4: 'iconfont icon-zaosheng',
 					color1: '#6690F9',
 					color2: '--next-color-warning-lighter',
@@ -121,7 +121,7 @@ export default defineComponent({
 				{
 					num1: '520,43',
 					num2: '-10.01',
-					num3: '访问统计信息',
+					num3: 'Access statistical information',
 					num4: 'fa fa-github-alt',
 					color1: '#FF6462',
 					color2: '--next-color-danger-lighter',
@@ -131,55 +131,55 @@ export default defineComponent({
 			homeThree: [
 				{
 					icon: 'iconfont icon-yangan',
-					label: '浅粉红',
+					label: 'Light pink',
 					value: '2.1%OBS/M',
 					iconColor: '#F72B3F',
 				},
 				{
 					icon: 'iconfont icon-wendu',
-					label: '深红(猩红)',
+					label: 'Deep red (crimson)',
 					value: '30℃',
 					iconColor: '#91BFF8',
 				},
 				{
 					icon: 'iconfont icon-shidu',
-					label: '淡紫红',
+					label: 'Lavenderblush ',
 					value: '57%RH',
 					iconColor: '#88D565',
 				},
 				{
 					icon: 'iconfont icon-shidu',
-					label: '弱紫罗兰红',
+					label: 'Weak Violet Red',
 					value: '107w',
 					iconColor: '#88D565',
 				},
 				{
 					icon: 'iconfont icon-zaosheng',
-					label: '中紫罗兰红',
+					label: 'Mid Violet Red',
 					value: '57DB',
 					iconColor: '#FBD4A0',
 				},
 				{
 					icon: 'iconfont icon-zaosheng',
-					label: '紫罗兰',
+					label: 'Violet',
 					value: '57PV',
 					iconColor: '#FBD4A0',
 				},
 				{
 					icon: 'iconfont icon-zaosheng',
-					label: '暗紫罗兰',
+					label: 'Dark Violet',
 					value: '517Cpd',
 					iconColor: '#FBD4A0',
 				},
 				{
 					icon: 'iconfont icon-zaosheng',
-					label: '幽灵白',
+					label: 'White',
 					value: '12kg',
 					iconColor: '#FBD4A0',
 				},
 				{
 					icon: 'iconfont icon-zaosheng',
-					label: '海军蓝',
+					label: 'Blue',
 					value: '64fm',
 					iconColor: '#FBD4A0',
 				},
@@ -198,26 +198,26 @@ export default defineComponent({
 			const option = {
 				backgroundColor: state.charts.bgColor,
 				title: {
-					text: '政策补贴额度',
+					text: 'Subsidy amount',
 					x: 'left',
 					textStyle: { fontSize: '15', color: state.charts.color },
 				},
 				grid: { top: 70, right: 20, bottom: 30, left: 30 },
 				tooltip: { trigger: 'axis' },
-				legend: { data: ['预购队列', '最新成交价'], right: 0 },
+				legend: { data: ['Pre order queue', 'Latest transaction price'], right: 0 },
 				xAxis: {
-					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+					data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 				},
 				yAxis: [
 					{
 						type: 'value',
-						name: '价格',
+						name: 'price',
 						splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
 					},
 				],
 				series: [
 					{
-						name: '预购队列',
+						name: 'Pre order queue',
 						type: 'line',
 						symbolSize: 6,
 						symbol: 'circle',
@@ -233,7 +233,7 @@ export default defineComponent({
 						},
 					},
 					{
-						name: '最新成交价',
+						name: 'Latest transaction price',
 						type: 'line',
 						symbolSize: 6,
 						symbol: 'circle',
@@ -277,7 +277,7 @@ export default defineComponent({
 		const initPieChart = () => {
 			if (!global.dispose.some((b: any) => b === global.homeChartTwo)) global.homeChartTwo.dispose();
 			global.homeChartTwo = <any>echarts.init(homePieRef.value, state.charts.theme);
-			var getname = ['房屋及结构物', '专用设备', '通用设备', '文物和陈列品', '图书、档案'];
+			var getname = ['Houses and structures', 'specialized equipment', 'general equipment', 'cultural relics and exhibits', 'books and archives'];
 			var getvalue = [34.2, 38.87, 17.88, 9.05, 2.05];
 			var data = [];
 			for (var i = 0; i < getname.length; i++) {
@@ -287,7 +287,7 @@ export default defineComponent({
 			const option = {
 				backgroundColor: state.charts.bgColor,
 				title: {
-					text: '房屋建筑工程',
+					text: 'Housing construction engineering',
 					x: 'left',
 					textStyle: { fontSize: '15', color: state.charts.color },
 				},
@@ -365,12 +365,12 @@ export default defineComponent({
 			const option = {
 				backgroundColor: state.charts.bgColor,
 				title: {
-					text: '地热开发利用',
+					text: 'Geothermal development and utilization',
 					x: 'left',
 					textStyle: { fontSize: '15', color: state.charts.color },
 				},
 				tooltip: { trigger: 'axis' },
-				legend: { data: ['供温', '回温', '压力值(Mpa)'], right: 0 },
+				legend: { data: ['Supply temperature', 'thawing', 'Pressure value(Mpa)'], right: 0 },
 				grid: { top: 70, right: 80, bottom: 30, left: 80 },
 				xAxis: [
 					{
@@ -382,7 +382,7 @@ export default defineComponent({
 				],
 				yAxis: [
 					{
-						name: '供回温度(℃）',
+						name: 'Supply and return temperature(℃）',
 						nameLocation: 'middle',
 						nameTextStyle: { padding: [3, 4, 50, 6] },
 						splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
@@ -391,7 +391,7 @@ export default defineComponent({
 						axisLabel: { color: state.charts.color, formatter: '{value} ' },
 					},
 					{
-						name: '压力值(Mpa)',
+						name: 'Pressure value(Mpa)',
 						nameLocation: 'middle',
 						nameTextStyle: { padding: [50, 4, 5, 6] },
 						splitLine: { show: false },
@@ -402,7 +402,7 @@ export default defineComponent({
 				],
 				series: [
 					{
-						name: '供温',
+						name: 'Supply temperature',
 						type: 'line',
 						smooth: true,
 						showSymbol: true,
@@ -430,7 +430,7 @@ export default defineComponent({
 						],
 					},
 					{
-						name: '回温',
+						name: 'thawing',
 						type: 'line',
 						smooth: true,
 						showSymbol: true,
@@ -463,7 +463,7 @@ export default defineComponent({
 						],
 					},
 					{
-						name: '压力值(Mpa)',
+						name: 'Pressure value(Mpa)',
 						type: 'bar',
 						barWidth: 30,
 						yAxisIndex: 1,

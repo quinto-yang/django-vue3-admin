@@ -131,10 +131,10 @@ export default {
         });
         // 设置placeholder 的默认值
         const placeholderComponentList = [
-            {key: 'text', placeholder: "请输入"},
-            {key: 'textarea', placeholder: "请输入"},
-            {key: 'input', placeholder: "请输入"},
-            {key: 'password', placeholder: "请输入"}
+            {key: 'text', placeholder: "enter"},
+            {key: 'textarea', placeholder: "enter"},
+            {key: 'input', placeholder: "enter"},
+            {key: 'password', placeholder: "enter"}
         ]
         placeholderComponentList.forEach((val) => {
             if (getType(val.key)?.search?.component) {

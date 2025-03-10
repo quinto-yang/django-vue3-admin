@@ -62,6 +62,13 @@ INSTALLED_APPS = [
     "dvadmin.system",
 ]
 
+#主要添加如下代码
+My_Apps = [
+	'crud_demo',  #新的应用写在这里
+]
+
+INSTALLED_APPS += My_Apps
+
 MIDDLEWARE = [
     "dvadmin.utils.middleware.HealthCheckMiddleware",
     "django.middleware.security.SecurityMiddleware",
@@ -103,10 +110,10 @@ DATABASES = {
     "default": {
         "ENGINE": DATABASE_ENGINE,
         "NAME": DATABASE_NAME,
-        "USER": DATABASE_USER,
-        "PASSWORD": DATABASE_PASSWORD,
-        "HOST": DATABASE_HOST,
-        "PORT": DATABASE_PORT,
+        # "USER": DATABASE_USER,
+        # "PASSWORD": DATABASE_PASSWORD,
+        # "HOST": DATABASE_HOST,
+        # "PORT": DATABASE_PORT,
     }
 }
 AUTH_USER_MODEL = "system.Users"

@@ -37,7 +37,7 @@ export default {
 		pagesIndex: '頁面',
 		pagesFiltering: '過濾篩選組件',
 		pagesFilteringDetails: '過濾篩選組件詳情',
-		pagesFilteringDetails1: '過濾篩選組件詳情111',
+		pagesFilteringDetails1: '過濾篩選組件詳情',
 		pagesIocnfont: 'ali 字體圖標',
 		pagesElement: 'ele 字體圖標',
 		pagesAwesome: 'awe 字體圖標',

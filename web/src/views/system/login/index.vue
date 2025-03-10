@@ -16,7 +16,7 @@
 <!--				<span class="login-right-warp-two"></span>-->
 				<div class="login-right-warp-mian">
 					<div class="login-right-warp-main-title">
-            {{userInfos.pwd_change_count===0?'初次登录修改密码':'欢迎登录'}}
+            {{userInfos.pwd_change_count===0?'Change password':'Welcome'}}
           </div>
 					<div class="login-right-warp-main-form">
 						<div v-if="!state.isScan">
@@ -44,22 +44,22 @@
 			</div>
 		</div>
 
-		<div class="login-authorization z-10">
-			<p>Copyright © {{ getSystemConfig['login.copyright'] || '2021-2024 北京信码新创科技有限公司' }} 版权所有</p>
+		<!-- <div class="login-authorization z-10">
+			<p>Copyright © {{ getSystemConfig['login.copyright'] || '2021-2025 ' }} </p>
 			<p class="la-other" style="margin-top: 5px;">
 				<a href="https://beian.miit.gov.cn" target="_blank">{{ getSystemConfig['login.keep_record'] ||
-					'京ICP备2021031018号' }}</a>
+					'' }}</a>
 				|
 				<a :href="getSystemConfig['login.help_url'] ? getSystemConfig['login.help_url'] : '#'"
-					target="_blank">帮助</a>
+					target="_blank">help</a>
 				|
 				<a
-					:href="getSystemConfig['login.privacy_url'] ? getBaseURL(getSystemConfig['login.privacy_url']) : '#'">隐私</a>
+					:href="getSystemConfig['login.privacy_url'] ? getBaseURL(getSystemConfig['login.privacy_url']) : '#'">privacy</a>
 				|
 				<a
-					:href="getSystemConfig['login.clause_url'] ? getBaseURL(getSystemConfig['login.clause_url']) : '#'">条款</a>
+					:href="getSystemConfig['login.clause_url'] ? getBaseURL(getSystemConfig['login.clause_url']) : '#'">clause</a>
 			</p>
-		</div>
+		</div> -->
 	</div>
 	<div v-if="loginBg">
 		<img :src="loginBg" class="loginBg fixed inset-0 z-1 w-full h-full" />

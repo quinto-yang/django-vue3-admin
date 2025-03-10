@@ -104,9 +104,9 @@ const handleDrawerClose = (type?: string) => {
  * 部门的删除事件
  */
 const handleDeleteMenu = (id: string, callback: Function) => {
-	ElMessageBox.confirm('您确认删除该菜单项吗?', '温馨提示', {
-		confirmButtonText: '确认',
-		cancelButtonText: '取消',
+	ElMessageBox.confirm('Are you sure to delete this menu item?', 'Tips', {
+		confirmButtonText: 'confirm',
+		cancelButtonText: 'cancel',
 		type: 'warning',
 	}).then(async () => {
 		const res: APIResponseData = await DelObj(id);

@@ -29,7 +29,7 @@ const props = defineProps({
 	// 内容框默认 placeholder
 	placeholder: {
 		type: String,
-		default: () => '请输入内容...',
+		default: () => 'enter...',
 	},
 	// https://www.wangeditor.com/v5/getting-started.html#mode-%E6%A8%A1%E5%BC%8F
 	// 模式，可选 <default|simple>，默认 default
